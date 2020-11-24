@@ -5,34 +5,34 @@ public class HomePage {
 
     public static void main(String[] args) {
 
-//        double x = 39.21;
-//        float y = 5.1f;
-//
-//
-//        System.out.println(x + y);
-//        //System.out.println((x + y).getClass().getName());
-//
-//        short a = 14;
-//        float b = 13;
-//        double c = 30;
-//        long t = 192301398193810323L;
-//
-//        System.out.println(a * b / c);
-//
-//        System.out.println(4 * 5 / 4 + 2);
-//
-//        System.out.println((y > 5) ? 21 : "Zebra");
+        double x = 39.21;
+        float y = 5.1f;
 
-//        int[] willThisWork = {1, 2, 3, 4, 5};
-//        System.out.println(Arrays.toString(willThisWork));
-//
-//        int[][] myComplexArray = {{5, 2, 1, 3}, {3, 9, 8, 9}, {5, 7, 12, 7}};
-//        for (int[] mySimpleArray : myComplexArray) {
-//            for (int i = 0; i < mySimpleArray.length; i++) {
-//                System.out.print(mySimpleArray[i] + "\t");
-//            }
-//            System.out.println();
-//        }
+
+        System.out.println(x + y);
+        //System.out.println((x + y).getClass().getName());
+
+        short a = 14;
+        float b = 13;
+        double c = 30;
+        long t = 192301398193810323L;
+
+        System.out.println(a * b / c);
+
+        System.out.println(4 * 5 / 4 + 2);
+
+        System.out.println((y > 5) ? 21 : "Zebra");
+
+        int[] willThisWork = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(willThisWork));
+
+        int[][] myComplexArray = {{5, 2, 1, 3}, {3, 9, 8, 9}, {5, 7, 12, 7}};
+        for (int[] mySimpleArray : myComplexArray) {
+            for (int i = 0; i < mySimpleArray.length; i++) {
+                System.out.print(mySimpleArray[i] + "\t");
+            }
+            System.out.println();
+        }
 
 //        int x = 20;
 //        while (x > 0) {
