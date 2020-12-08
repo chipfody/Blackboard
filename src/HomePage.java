@@ -70,14 +70,31 @@ public class HomePage {
 //            System.out.println("Hello World");
 //            }
 
-        byte m = 40, n = 50;
-        byte sum = (byte) (m + n);
-        System.out.println(sum);
+//        byte m = 40, n = 50;
+//        byte sum = (byte) (m + n);
+//        System.out.println(sum);
+//
+//        int x1 = 50, x2 = 75;
+//        boolean p = x1 >= x2;
+//        if(p = true) System.out.println("Success");
+//         else System.out.println("Failure");
 
-        int x1 = 50, x2 = 75;
-        boolean p = x1 >= x2;
-        if(p = true) System.out.println("Success");
-         else System.out.println("Failure");
+        String s1 = "1";
+        String s2 = s1.concat("2");
+        s2.concat("3");
+        System.out.println(s2);
+
+        String string = "animals";
+        System.out.println(string.indexOf('a')); // 0
+        System.out.println(string.indexOf("al")); // 4
+        System.out.println(string.indexOf('a', 4)); // 4
+        System.out.println(string.indexOf("al", 5)); //-1
+
+        StringBuilder sb = new StringBuilder("animals");
+        String sub = sb.substring(sb.indexOf("a"), sb.indexOf("al"));
+        int len = sb.length();
+        char ch = sb.charAt(6);
+        System.out.println(sub + " " + len + " " + ch);
 
 
     } //main
