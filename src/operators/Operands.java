@@ -30,5 +30,21 @@ public class Operands {
         char c = 122;
         System.out.println(c);
 
+        int myChar = 97;
+        int yourChar = 98;
+        System.out.print((char)myChar + (char)yourChar);
+
+        int age = 20;
+        System.out.print(" ");
+        System.out.print((float) age + "\n");
+
+        System.out.println("\n");
+        int num1 = 12;
+        float num2 = 17.8f;
+        boolean value = true;
+        boolean result = (num1 >= 12 && num2 < 4.567) || value == true;
+        System.out.println(num2 < 4.567);
+        System.out.println(result);
+
     }
 }
