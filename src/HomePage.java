@@ -96,6 +96,19 @@ public class HomePage {
         char ch = sb.charAt(6);
         System.out.println(sub + " " + len + " " + ch);
 
+        int num = 10;
+        int val = 12;
+        String word = "ABCD";
+        System.out.println(num + val + word);
+        System.out.println("" + num + val + word);
+        System.out.println(word + num + val);
+        System.out.println(num + word + val);
+
+        if (word instanceof String) {
+            System.out.println("true");
+
+
+        }
 
     } //main
 }
