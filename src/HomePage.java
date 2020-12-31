@@ -1,3 +1,6 @@
+
+
+import java.time.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -6,34 +9,34 @@ public class HomePage {
 
     public static void main(String[] args) {
 
-        double x = 39.21;
-        float y = 5.1f;
-
-
-        System.out.println(x + y);
-        //System.out.println((x + y).getClass().getName());
-
-        short a = 14;
-        float b = 13;
-        double c = 30;
-        long t = 192301398193810323L;
-
-        System.out.println(a * b / c);
-
-        System.out.println(4 * 5 / 4 + 2);
-
-        System.out.println((y > 5) ? 21 : "Zebra");
-
-        int[] willThisWork = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(willThisWork));
-
-        int[][] myComplexArray = {{5, 2, 1, 3}, {3, 9, 8, 9}, {5, 7, 12, 7}};
-        for (int[] mySimpleArray : myComplexArray) {
-            for (int i = 0; i < mySimpleArray.length; i++) {
-                System.out.print(mySimpleArray[i] + "\t");
-            }
-            System.out.println();
-        }
+//        double x = 39.21;
+//        float y = 5.1f;
+//
+//
+//        System.out.println(x + y);
+//        //System.out.println((x + y).getClass().getName());
+//
+//        short a = 14;
+//        float b = 13;
+//        double c = 30;
+//        long t = 192301398193810323L;
+//
+//        System.out.println(a * b / c);
+//
+//        System.out.println(4 * 5 / 4 + 2);
+//
+//        System.out.println((y > 5) ? 21 : "Zebra");
+//
+//        int[] willThisWork = {1, 2, 3, 4, 5};
+//        System.out.println(Arrays.toString(willThisWork));
+//
+//        int[][] myComplexArray = {{5, 2, 1, 3}, {3, 9, 8, 9}, {5, 7, 12, 7}};
+//        for (int[] mySimpleArray : myComplexArray) {
+//            for (int i = 0; i < mySimpleArray.length; i++) {
+//                System.out.print(mySimpleArray[i] + "\t");
+//            }
+//            System.out.println();
+//        }
 
 //        int x = 20;
 //        while (x > 0) {
@@ -80,52 +83,95 @@ public class HomePage {
 //        if(p = true) System.out.println("Success");
 //         else System.out.println("Failure");
 
-        String s1 = "1";
-        String s2 = s1.concat("2");
-        s2.concat("3");
-        System.out.println(s2);
+//
 
-        String string = "animals";
-        System.out.println(string.indexOf('a')); // 0
-        System.out.println(string.indexOf("al")); // 4
-        System.out.println(string.indexOf('a', 4)); // 4
-        System.out.println(string.indexOf("al", 5)); //-1
+        LocalDate date1 = LocalDate.of(2015, 12, 27);
+        LocalDate date2 = LocalDate.of(2015, Month.DECEMBER, 27);
+        LocalDate date3 = LocalDate.now();
+        System.out.println(date1 + " : " + date2 + " : " + date3);
 
-        StringBuilder sb = new StringBuilder("animals");
-        String sub = sb.substring(sb.indexOf("a"), sb.indexOf("al"));
-        int len = sb.length();
-        char ch = sb.charAt(6);
-        System.out.println(sub + " " + len + " " + ch);
+        LocalDate date = LocalDate.parse("2020-08-30");
+        System.out.println(date.getDayOfMonth());
+        System.out.println(date.getDayOfWeek());
+        System.out.println(date.getDayOfYear());
+        System.out.println(date.getMonth());
+        System.out.println(date.getMonthValue());
+        System.out.println(date.getYear());
 
-        int num = 10;
-        int val = 12;
-        String word = "ABCD";
-        System.out.println(num + val + word);
-        System.out.println("" + num + val + word);
-        System.out.println(word + num + val);
-        System.out.println(num + word + val);
+        LocalDate shreyaBday = LocalDate.parse("2002-08-30");
+        LocalDate paulBday = LocalDate.parse("2002-07-29");
+        System.out.println(shreyaBday.isAfter(paulBday));
+        System.out.println(shreyaBday.isBefore(paulBday));
+        System.out.println(shreyaBday.isBefore(shreyaBday));
 
-        if (word instanceof String) {
-            System.out.println("true");
-        }
+        LocalDate bday = LocalDate.now();
+        System.out.println(bday.minusDays(10));
+        System.out.println(bday.minusMonths(2));
+        System.out.println(bday.minusWeeks(30));
+        System.out.println(bday.minusYears(1));
+        System.out.println(bday.plusDays(1));
+        System.out.println(bday.plusMonths(1));
+        System.out.println(bday.plusWeeks(7));
+        System.out.println(bday.plusYears(1));
+        System.out.println(bday.withDayOfMonth(1));
+        System.out.println(bday.withDayOfYear(1));
+        System.out.println(bday.withMonth(7));
+        System.out.println(bday.withYear(1));
+        System.out.println(bday.atTime(16, 30));
+        System.out.println(bday.atTime(16, 30, 20));
+        System.out.println(bday.atTime(16, 30, 20, 300));
+        System.out.println(bday.atTime(LocalTime.of(16, 30)));
+        System.out.println(bday.toEpochDay());
+
+
+        System.out.println();
+        LocalTime timeHrsMin = LocalTime.of(12, 12);
+        LocalTime timeHrsMinSec = LocalTime.of(0, 12, 6);
+        LocalTime timeHrsMinSecNano = LocalTime.of(14, 7, 10, 998654578);
+        System.out.println(timeHrsMin);
+        System.out.println(timeHrsMinSec);
+        System.out.println(timeHrsMinSecNano);
+        System.out.println(LocalTime.now());
+        LocalTime time = LocalTime.now();
+        System.out.println(time.getHour());
+        System.out.println(time.getMinute());
+        System.out.println(time.getSecond());
+        System.out.println(time.getNano());
+
+        System.out.println();
+        int worldRecord = 10;
+        LocalTime raceStartTime = LocalTime.of(8, 10, 55);
+        LocalTime raceEndTime = LocalTime.of(8, 11, 11);
+        if (raceStartTime.plusSeconds(worldRecord).isAfter(raceEndTime))
+            System.out.println("New world record");
+        else
+            System.out.println("Try harder");
+
+        System.out.println();
+        LocalDateTime prizeCeremony = LocalDateTime.parse("2050-06-05T14:00:00");
+        LocalDateTime dateTimeNow = LocalDateTime.now();
+        if (prizeCeremony.getMonthValue() == 6)
+            System.out.println("Can't invite president");
+        else
+            System.out.println("President invited");
+        LocalDateTime chiefGuestDeparture =
+                LocalDateTime.parse("2050-06-05T14:30:00");
+        if (prizeCeremony.plusHours(2).isAfter(chiefGuestDeparture))
+            System.out.println("Chief Guest will leave before ceremony completes");
+        LocalDateTime eventMgrArrival = LocalDateTime.of(2050, 6, 5, 14, 30, 0);
+        if (eventMgrArrival.isAfter(prizeCeremony.minusHours(3)))
+            System.out.println("Manager is supposed to arrive 3 hrs earlier");
+
+        System.out.println();
+        LocalDate carnivalStart = LocalDate.of(2050, 10, 31);
+        LocalDate carnivalEnd = LocalDate.of(2051, 1, 2);
+        Period periodBetween = Period.between(carnivalStart, carnivalEnd);
+        System.out.println(periodBetween);;
 
 
 
-                ArrayList<StringBuilder> myArrList =
-                        new ArrayList<StringBuilder>();
-                StringBuilder sb1 = new StringBuilder("Jan");
-                StringBuilder sb2 = new StringBuilder("Feb");
-                myArrList.add(sb1);
-                myArrList.add(sb2);
-                myArrList.add(sb2);
-                System.out.println(myArrList.contains(new StringBuilder("Jan")));
-                System.out.println(myArrList.contains(sb1));
-                System.out.println(myArrList.indexOf(new StringBuilder("Feb")));
-                System.out.println(myArrList.indexOf(sb2));
-                System.out.println(myArrList.lastIndexOf(
-                        new StringBuilder("Feb")));
-                System.out.println(myArrList.lastIndexOf(sb2));
-                System.out.println(Arrays.toString(myArrList.toArray()));
+
+
 
 
     } //main
