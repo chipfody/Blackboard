@@ -88,53 +88,72 @@ public class HomePage {
 //
 
 //
-        Period period10Days = Period.of(0, 0, 10);
-        Period period1Month = Period.of(0, 1, 0);
-        System.out.println(period10Days.minus(period1Month));
-        System.out.println(period10Days.minusDays(5));
-        System.out.println(period10Days.minusMonths(5));
-        System.out.println(period10Days.minusYears(5));
-
-        System.out.println();
-
-        LocalDate bday = LocalDate.of(2020, 10, 29);
-        LocalDate today = LocalDate.now();
-        Period period10Days2 = Period.of(0, 0, 10);
-        if (bday.minus(period10Days2).isBefore(today))
-            System.out.println("Time to send out reminders to friends");
-
-        System.out.println();
-
-        Period year1Month9Day20 = Period.of(1, 9, 20);
-        System.out.println(year1Month9Day20.multipliedBy(2));
-        System.out.println(year1Month9Day20.multipliedBy(-2));
-
-        System.out.println();
-
-        System.out.println(Period.of(10,5,40).toTotalMonths());
-
-        System.out.println();
-
-        DateTimeFormatter formatter1 =
-                DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
-        DateTimeFormatter formatter2 =
-                DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL);
-        DateTimeFormatter formatter3 =
-                DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
-        DateTimeFormatter formatter4 =
-                DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
-        LocalDate date = LocalDate.now();
-        System.out.println(formatter1.format(date));
-        System.out.println(formatter2.format(date));
-        System.out.println(formatter3.format(date));
-        System.out.println(formatter4.format(date));
-
-        System.out.println();
-
-        DateTimeFormatter formatter =
-                DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
-        LocalTime time = LocalTime.now();
+//        Period period10Days = Period.of(0, 0, 10);
+//        Period period1Month = Period.of(0, 1, 0);
+//        System.out.println(period10Days.minus(period1Month));
+//        System.out.println(period10Days.minusDays(5));
+//        System.out.println(period10Days.minusMonths(5));
+//        System.out.println(period10Days.minusYears(5));
+//
+//        System.out.println();
+//
+//        LocalDate bday = LocalDate.of(2020, 10, 29);
+//        LocalDate today = LocalDate.now();
+//        Period period10Days2 = Period.of(0, 0, 10);
+//        if (bday.minus(period10Days2).isBefore(today))
+//            System.out.println("Time to send out reminders to friends");
+//
+//        System.out.println();
+//
+//        Period year1Month9Day20 = Period.of(1, 9, 20);
+//        System.out.println(year1Month9Day20.multipliedBy(2));
+//        System.out.println(year1Month9Day20.multipliedBy(-2));
+//
+//        System.out.println();
+//
+//        System.out.println(Period.of(10,5,40).toTotalMonths());
+//
+//        System.out.println();
+//
+//        DateTimeFormatter formatter1 =
+//                DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+//        DateTimeFormatter formatter2 =
+//                DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL);
+//        DateTimeFormatter formatter3 =
+//                DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+//        DateTimeFormatter formatter4 =
+//                DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+//        LocalDate date = LocalDate.now();
+//        System.out.println(formatter1.format(date));
+//        System.out.println(formatter2.format(date));
+//        System.out.println(formatter3.format(date));
+//        System.out.println(formatter4.format(date));
+//
+//        System.out.println();
+//
+//        DateTimeFormatter formatter =
+//                DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+//        LocalTime time = LocalTime.now();
 //        System.out.println(formatter.format(time));
+
+
+
+//                int[] arr = new int[5];
+//                byte b = 4; char c = 99; int longVar = 10;
+//                arr[0] = b;
+//                arr[1] = c;
+//                arr[3] = longVar;
+//                for (int i = 0; i < arr.length; i++) {
+//                    System.out.println(arr[i]);
+
+                    ArrayList<String> ejg = new ArrayList<>(); // line 4
+                    ejg.add("One"); // line 5
+                    ejg.add("Two"); // line 6
+                    System.out.println(ejg.contains(new String("One"))); // line 7
+                    System.out.println(ejg.indexOf("Two")); // line 8
+                    ejg.clear(); // line 9
+                    System.out.println(ejg); // line 10
+//                    System.out.println(ejg.get(1)); // line 11
 
 
 
