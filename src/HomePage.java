@@ -1,6 +1,8 @@
 
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -85,88 +87,54 @@ public class HomePage {
 
 //
 
-        LocalDate date1 = LocalDate.of(2015, 12, 27);
-        LocalDate date2 = LocalDate.of(2015, Month.DECEMBER, 27);
-        LocalDate date3 = LocalDate.now();
-        System.out.println(date1 + " : " + date2 + " : " + date3);
-
-        LocalDate date = LocalDate.parse("2020-08-30");
-        System.out.println(date.getDayOfMonth());
-        System.out.println(date.getDayOfWeek());
-        System.out.println(date.getDayOfYear());
-        System.out.println(date.getMonth());
-        System.out.println(date.getMonthValue());
-        System.out.println(date.getYear());
-
-        LocalDate shreyaBday = LocalDate.parse("2002-08-30");
-        LocalDate paulBday = LocalDate.parse("2002-07-29");
-        System.out.println(shreyaBday.isAfter(paulBday));
-        System.out.println(shreyaBday.isBefore(paulBday));
-        System.out.println(shreyaBday.isBefore(shreyaBday));
-
-        LocalDate bday = LocalDate.now();
-        System.out.println(bday.minusDays(10));
-        System.out.println(bday.minusMonths(2));
-        System.out.println(bday.minusWeeks(30));
-        System.out.println(bday.minusYears(1));
-        System.out.println(bday.plusDays(1));
-        System.out.println(bday.plusMonths(1));
-        System.out.println(bday.plusWeeks(7));
-        System.out.println(bday.plusYears(1));
-        System.out.println(bday.withDayOfMonth(1));
-        System.out.println(bday.withDayOfYear(1));
-        System.out.println(bday.withMonth(7));
-        System.out.println(bday.withYear(1));
-        System.out.println(bday.atTime(16, 30));
-        System.out.println(bday.atTime(16, 30, 20));
-        System.out.println(bday.atTime(16, 30, 20, 300));
-        System.out.println(bday.atTime(LocalTime.of(16, 30)));
-        System.out.println(bday.toEpochDay());
-
+//
+        Period period10Days = Period.of(0, 0, 10);
+        Period period1Month = Period.of(0, 1, 0);
+        System.out.println(period10Days.minus(period1Month));
+        System.out.println(period10Days.minusDays(5));
+        System.out.println(period10Days.minusMonths(5));
+        System.out.println(period10Days.minusYears(5));
 
         System.out.println();
-        LocalTime timeHrsMin = LocalTime.of(12, 12);
-        LocalTime timeHrsMinSec = LocalTime.of(0, 12, 6);
-        LocalTime timeHrsMinSecNano = LocalTime.of(14, 7, 10, 998654578);
-        System.out.println(timeHrsMin);
-        System.out.println(timeHrsMinSec);
-        System.out.println(timeHrsMinSecNano);
-        System.out.println(LocalTime.now());
+
+        LocalDate bday = LocalDate.of(2020, 10, 29);
+        LocalDate today = LocalDate.now();
+        Period period10Days2 = Period.of(0, 0, 10);
+        if (bday.minus(period10Days2).isBefore(today))
+            System.out.println("Time to send out reminders to friends");
+
+        System.out.println();
+
+        Period year1Month9Day20 = Period.of(1, 9, 20);
+        System.out.println(year1Month9Day20.multipliedBy(2));
+        System.out.println(year1Month9Day20.multipliedBy(-2));
+
+        System.out.println();
+
+        System.out.println(Period.of(10,5,40).toTotalMonths());
+
+        System.out.println();
+
+        DateTimeFormatter formatter1 =
+                DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+        DateTimeFormatter formatter2 =
+                DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL);
+        DateTimeFormatter formatter3 =
+                DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+        DateTimeFormatter formatter4 =
+                DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+        LocalDate date = LocalDate.now();
+        System.out.println(formatter1.format(date));
+        System.out.println(formatter2.format(date));
+        System.out.println(formatter3.format(date));
+        System.out.println(formatter4.format(date));
+
+        System.out.println();
+
+        DateTimeFormatter formatter =
+                DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
         LocalTime time = LocalTime.now();
-        System.out.println(time.getHour());
-        System.out.println(time.getMinute());
-        System.out.println(time.getSecond());
-        System.out.println(time.getNano());
-
-        System.out.println();
-        int worldRecord = 10;
-        LocalTime raceStartTime = LocalTime.of(8, 10, 55);
-        LocalTime raceEndTime = LocalTime.of(8, 11, 11);
-        if (raceStartTime.plusSeconds(worldRecord).isAfter(raceEndTime))
-            System.out.println("New world record");
-        else
-            System.out.println("Try harder");
-
-        System.out.println();
-        LocalDateTime prizeCeremony = LocalDateTime.parse("2050-06-05T14:00:00");
-        LocalDateTime dateTimeNow = LocalDateTime.now();
-        if (prizeCeremony.getMonthValue() == 6)
-            System.out.println("Can't invite president");
-        else
-            System.out.println("President invited");
-        LocalDateTime chiefGuestDeparture =
-                LocalDateTime.parse("2050-06-05T14:30:00");
-        if (prizeCeremony.plusHours(2).isAfter(chiefGuestDeparture))
-            System.out.println("Chief Guest will leave before ceremony completes");
-        LocalDateTime eventMgrArrival = LocalDateTime.of(2050, 6, 5, 14, 30, 0);
-        if (eventMgrArrival.isAfter(prizeCeremony.minusHours(3)))
-            System.out.println("Manager is supposed to arrive 3 hrs earlier");
-
-        System.out.println();
-        LocalDate carnivalStart = LocalDate.of(2050, 10, 31);
-        LocalDate carnivalEnd = LocalDate.of(2051, 1, 2);
-        Period periodBetween = Period.between(carnivalStart, carnivalEnd);
-        System.out.println(periodBetween);;
+//        System.out.println(formatter.format(time));
 
 
 
