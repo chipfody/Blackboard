@@ -146,14 +146,52 @@ public class HomePage {
 //                for (int i = 0; i < arr.length; i++) {
 //                    System.out.println(arr[i]);
 
-                    ArrayList<String> ejg = new ArrayList<>(); // line 4
-                    ejg.add("One"); // line 5
-                    ejg.add("Two"); // line 6
-                    System.out.println(ejg.contains(new String("One"))); // line 7
-                    System.out.println(ejg.indexOf("Two")); // line 8
-                    ejg.clear(); // line 9
-                    System.out.println(ejg); // line 10
+//                    ArrayList<String> ejg = new ArrayList<>(); // line 4
+//                    ejg.add("One"); // line 5
+//                    ejg.add("Two"); // line 6
+//                    System.out.println(ejg.contains(new String("One"))); // line 7
+//                    System.out.println(ejg.indexOf("Two")); // line 8
+//                    ejg.clear(); // line 9
+//                    System.out.println(ejg); // line 10
 //                    System.out.println(ejg.get(1)); // line 11
+
+        int score = 110;
+        System.out.println(score);
+        if (score > 200) {
+            if (score <400)
+                if (score > 300)
+                    System.out.println(1);
+                else
+                    System.out.println(2);
+            else
+                System.out.println(3);
+        }
+        else
+            System.out.println("End of the line");
+
+        System.out.println();
+
+        int bill = 2000;
+        int qty = 10;
+        int discount = (bill > 1000)? (qty > 11)? 10 : 9 : 5;
+        System.out.println(discount);
+
+        System.out.println();
+
+        String day = "TUE";
+        switch (day) {
+            case "MON":
+            case "TUE":
+            case "WED":
+            case "THU": System.out.println("Time to work");
+                break;
+            case "FRI": System.out.println("Nearing weekend");
+                break;
+            case "SAT":
+            case "SUN": System.out.println("Weekend!");
+                break;
+            default: System.out.println("Invalid day?");
+        }
 
 
 
