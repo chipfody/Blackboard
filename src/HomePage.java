@@ -155,45 +155,76 @@ public class HomePage {
 //                    System.out.println(ejg); // line 10
 //                    System.out.println(ejg.get(1)); // line 11
 
-        int score = 110;
-        System.out.println(score);
-        if (score > 200) {
-            if (score <400)
-                if (score > 300)
-                    System.out.println(1);
-                else
-                    System.out.println(2);
-            else
-                System.out.println(3);
-        }
-        else
-            System.out.println("End of the line");
+//        int score = 110;
+//        System.out.println(score);
+//        if (score > 200) {
+//            if (score <400)
+//                if (score > 300)
+//                    System.out.println(1);
+//                else
+//                    System.out.println(2);
+//            else
+//                System.out.println(3);
+//        }
+//        else
+//            System.out.println("End of the line");
+//
+//        System.out.println();
+//
+//        int bill = 2000;
+//        int qty = 10;
+//        int discount = (bill > 1000)? (qty > 11)? 10 : 9 : 5;
+//        System.out.println(discount);
+//
+//        System.out.println();
+//
+//        String day = "TUE";
+//        switch (day) {
+//            case "MON":
+//            case "TUE":
+//            case "WED":
+//            case "THU": System.out.println("Time to work");
+//                break;
+//            case "FRI": System.out.println("Nearing weekend");
+//                break;
+//            case "SAT":
+//            case "SUN": System.out.println("Weekend!");
+//                break;
+//            default: System.out.println("Invalid day?");
+//        }
 
         System.out.println();
 
-        int bill = 2000;
-        int qty = 10;
-        int discount = (bill > 1000)? (qty > 11)? 10 : 9 : 5;
-        System.out.println(discount);
+        ArrayList<String> exams= new ArrayList<String>();
+        exams.add("Java");
+        exams.add("Oracle");
+        ArrayList<String> levels= new ArrayList<String>();
+        levels.add("Basic");
+        levels.add("Advanced");
+        ArrayList<String> grades= new ArrayList<String>();
+        grades.add("Pass");
+        grades.add("Fail");
 
-        System.out.println();
+        ArrayList<ArrayList<String>> nestedArrayList =
+                new ArrayList< ArrayList<String>>();
+        nestedArrayList.add(exams);
+        nestedArrayList.add(levels);
+        nestedArrayList.add(grades);
 
-        String day = "TUE";
-        switch (day) {
-            case "MON":
-            case "TUE":
-            case "WED":
-            case "THU": System.out.println("Time to work");
-                break;
-            case "FRI": System.out.println("Nearing weekend");
-                break;
-            case "SAT":
-            case "SUN": System.out.println("Weekend!");
-                break;
-            default: System.out.println("Invalid day?");
-        }
+        for (ArrayList<String> nestedListElement : nestedArrayList)
+            for (String element : nestedListElement)
+                System.out.println(element);
 
-
+        StringBuilder myArr[] = {
+                new StringBuilder("Java"),
+                new StringBuilder("Loop")
+        };
+        for (StringBuilder val : myArr)
+        System.out.println (val);
+        for (StringBuilder val : myArr)
+            val = new StringBuilder("Oracle");
+        for (StringBuilder val : myArr)
+            System.out.println (val);
 
 
 
