@@ -193,40 +193,114 @@ public class HomePage {
 //            default: System.out.println("Invalid day?");
 //        }
 
+//        System.out.println();
+//
+//        ArrayList<String> exams= new ArrayList<String>();
+//        exams.add("Java");
+//        exams.add("Oracle");
+//        ArrayList<String> levels= new ArrayList<String>();
+//        levels.add("Basic");
+//        levels.add("Advanced");
+//        ArrayList<String> grades= new ArrayList<String>();
+//        grades.add("Pass");
+//        grades.add("Fail");
+//
+//        ArrayList<ArrayList<String>> nestedArrayList =
+//                new ArrayList< ArrayList<String>>();
+//        nestedArrayList.add(exams);
+//        nestedArrayList.add(levels);
+//        nestedArrayList.add(grades);
+//
+//        for (ArrayList<String> nestedListElement : nestedArrayList)
+//            for (String element : nestedListElement)
+//                System.out.println(element);
+//
+//        StringBuilder myArr[] = {
+//                new StringBuilder("Java"),
+//                new StringBuilder("Loop")
+//        };
+//        for (StringBuilder val : myArr)
+//        System.out.println (val);
+//        for (StringBuilder val : myArr)
+//            val = new StringBuilder("Oracle");
+//        for (StringBuilder val : myArr)
+//            System.out.println (val);
+
+
+        String[] programmers = {"Outer", "Inner"};
+        outer:
+        for (String outer : programmers) {
+            for (String inner : programmers) {
+                if (inner.equals("Inner"))
+                    break outer;
+                System.out.println(inner + ":");
+            }
+        }
+        System.out.println("space" + "\n");
+
+        String[] programmers2 = {"Paul", "Shreya", "Selvan", "Harry"};
+        outer:
+        for (String name1 : programmers2) {
+            System.out.println(name1);
+            for (String name : programmers2) {
+                if (name.equals("Shreya"))
+                    continue outer;
+                System.out.println(name);
+            }
+        }
+
         System.out.println();
 
-        ArrayList<String> exams= new ArrayList<String>();
-        exams.add("Java");
-        exams.add("Oracle");
-        ArrayList<String> levels= new ArrayList<String>();
-        levels.add("Basic");
-        levels.add("Advanced");
-        ArrayList<String> grades= new ArrayList<String>();
-        grades.add("Pass");
-        grades.add("Fail");
+        for (int i = 1; i <= 10; ++i) {
 
-        ArrayList<ArrayList<String>> nestedArrayList =
-                new ArrayList< ArrayList<String>>();
-        nestedArrayList.add(exams);
-        nestedArrayList.add(levels);
-        nestedArrayList.add(grades);
+            // if value of i is between 4 and 9
+            // continue is executed
+            if (i > 4 && i < 9) {
+                continue;
+            }
+            System.out.println(i);
+        }
 
-        for (ArrayList<String> nestedListElement : nestedArrayList)
-            for (String element : nestedListElement)
-                System.out.println(element);
+        System.out.println();
 
-        StringBuilder myArr[] = {
-                new StringBuilder("Java"),
-                new StringBuilder("Loop")
-        };
-        for (StringBuilder val : myArr)
-        System.out.println (val);
-        for (StringBuilder val : myArr)
-            val = new StringBuilder("Oracle");
-        for (StringBuilder val : myArr)
-            System.out.println (val);
+        start:
+        for (int i = 0; i < 5; i++) {
+            System.out.println();
+            for (int j = 0; j < 10; j++) {
+                System.out.print("#");
+                if (j >= i)
+                    continue;// start;
+            }
+            System.out.println("This will never"
+                    + " be printed");
+        }
+        System.out.println();
 
+        start: for (int i = 0; i < 5; i++) {
+            System.out.println();
+            for (int j = 0; j < 10; j++) {
+                System.out.print("#");
+                if (j >= i)
+                    continue start;
+            }
+            System.out.println("This will never"
+                    + " be printed");
+        }
 
+        System.out.println("\n");
+
+        first:
+        for (int i = 1; i < 6; ++i) {
+
+            // inner loop
+            for (int j = 1; j < 5; ++j) {
+                if (i == 3 || j == 2)
+
+                    // skips the current iteration of outer loop
+                    continue first;
+                System.out.println("i = " + i + "; j = " + j);
+            }
+        }
 
 
 
