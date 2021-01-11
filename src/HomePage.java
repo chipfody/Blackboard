@@ -227,79 +227,25 @@ public class HomePage {
 //            System.out.println (val);
 
 
-        String[] programmers = {"Outer", "Inner"};
-        outer:
-        for (String outer : programmers) {
-            for (String inner : programmers) {
-                if (inner.equals("Inner"))
-                    break outer;
-                System.out.println(inner + ":");
-            }
-        }
-        System.out.println("space" + "\n");
+//
 
-        String[] programmers2 = {"Paul", "Shreya", "Selvan", "Harry"};
-        outer:
-        for (String name1 : programmers2) {
-            System.out.println(name1);
-            for (String name : programmers2) {
-                if (name.equals("Shreya"))
-                    continue outer;
-                System.out.println(name);
-            }
-        }
+        int i = 10;
+        do
+            while (i++ < 15) {
+                System.out.println("i = " + i);
+                i = i + 20;}
+        while (i < 2);
+        System.out.println(i);
 
-        System.out.println();
+        int num = 20;
+        final int num2 = 20;
 
-        for (int i = 1; i <= 10; ++i) {
-
-            // if value of i is between 4 and 9
-            // continue is executed
-            if (i > 4 && i < 9) {
-                continue;
-            }
-            System.out.println(i);
-        }
-
-        System.out.println();
-
-        start:
-        for (int i = 0; i < 5; i++) {
-            System.out.println();
-            for (int j = 0; j < 10; j++) {
-                System.out.print("#");
-                if (j >= i)
-                    continue;// start;
-            }
-            System.out.println("This will never"
-                    + " be printed");
-        }
-        System.out.println();
-
-        start: for (int i = 0; i < 5; i++) {
-            System.out.println();
-            for (int j = 0; j < 10; j++) {
-                System.out.print("#");
-                if (j >= i)
-                    continue start;
-            }
-            System.out.println("This will never"
-                    + " be printed");
-        }
-
-        System.out.println("\n");
-
-        first:
-        for (int i = 1; i < 6; ++i) {
-
-            // inner loop
-            for (int j = 1; j < 5; ++j) {
-                if (i == 3 || j == 2)
-
-                    // skips the current iteration of outer loop
-                    continue first;
-                System.out.println("i = " + i + "; j = " + j);
-            }
+        switch (num) {
+            default:
+                System.out.println("default");
+            case num2:
+                System.out.println(4);
+                break;
         }
 
 
