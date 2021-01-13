@@ -16,7 +16,7 @@ public class HomePage {
 
 
         System.out.println(x + y);
-        //System.out.println((x + y).getClass().getName());
+
 
         short a = 14;
         float b = 13;
@@ -40,15 +40,15 @@ public class HomePage {
             System.out.println();
         }
 
-        int x = 20;
-        while (x > 0) {
-            do {
-                x -= 2;
-                System.out.println("x = " + x);
-            } while (x > 5);
-                x--;
-                System.out.print("now x = "+ x + "\t");
-        }
+//        int x1 = 20;
+//        while (x1 > 0) {
+//            do {
+//                x1 -= 2;
+//                System.out.println("x1 = " + x1);
+//            } while (x > 5);
+//                x1--;
+//                System.out.print("now x1 = "+ x1 + "\t");
+//        }
 
 
                 int[][] list = {{1,13,5},{1,2,5},{2,7,2}};
@@ -80,8 +80,8 @@ public class HomePage {
         byte sum = (byte) (m + n);
         System.out.println(sum);
 
-        int x1 = 50, x2 = 75;
-        boolean p = x1 >= x2;
+        int z1 = 50, z2 = 75;
+        boolean p = z1 >= z2;
         if(p = true) System.out.println("Success");
          else System.out.println("Failure");
 
@@ -139,9 +139,9 @@ public class HomePage {
 
 
                 int[] arr = new int[5];
-                byte b = 4; char c = 99; int longVar = 10;
-                arr[0] = b;
-                arr[1] = c;
+                byte b1 = 4; char c1 = 99; int longVar = 10;
+                arr[0] = b1;
+                arr[1] = c1;
                 arr[3] = longVar;
                 for (int i = 0; i < arr.length; i++) {
                     System.out.println(arr[i]);
@@ -155,100 +155,102 @@ public class HomePage {
                     System.out.println(ejg); // line 10
                     System.out.println(ejg.get(1)); // line 11
 
-        int score = 110;
-        System.out.println(score);
-        if (score > 200) {
-            if (score <400)
-                if (score > 300)
-                    System.out.println(1);
-                else
-                    System.out.println(2);
-            else
-                System.out.println(3);
-        }
-        else
-            System.out.println("End of the line");
+                    int score = 110;
+                    System.out.println(score);
+                    if (score > 200) {
+                        if (score < 400)
+                            if (score > 300)
+                                System.out.println(1);
+                            else
+                                System.out.println(2);
+                        else
+                            System.out.println(3);
+                    } else
+                        System.out.println("End of the line");
 
-        System.out.println();
+                    System.out.println();
 
-        int bill = 2000;
-        int qty = 10;
-        int discount = (bill > 1000)? (qty > 11)? 10 : 9 : 5;
-        System.out.println(discount);
+                    int bill = 2000;
+                    int qty = 10;
+                    int discount = (bill > 1000) ? (qty > 11) ? 10 : 9 : 5;
+                    System.out.println(discount);
 
-        System.out.println();
+                    System.out.println();
 
-        String day = "TUE";
-        switch (day) {
-            case "MON":
-            case "TUE":
-            case "WED":
-            case "THU": System.out.println("Time to work");
-                break;
-            case "FRI": System.out.println("Nearing weekend");
-                break;
-            case "SAT":
-            case "SUN": System.out.println("Weekend!");
-                break;
-            default: System.out.println("Invalid day?");
-        }
+                    String day = "TUE";
+                    switch (day) {
+                        case "MON":
+                        case "TUE":
+                        case "WED":
+                        case "THU":
+                            System.out.println("Time to work");
+                            break;
+                        case "FRI":
+                            System.out.println("Nearing weekend");
+                            break;
+                        case "SAT":
+                        case "SUN":
+                            System.out.println("Weekend!");
+                            break;
+                        default:
+                            System.out.println("Invalid day?");
+                    }
 
-        System.out.println();
+                    System.out.println();
 
-        ArrayList<String> exams= new ArrayList<String>();
-        exams.add("Java");
-        exams.add("Oracle");
-        ArrayList<String> levels= new ArrayList<String>();
-        levels.add("Basic");
-        levels.add("Advanced");
-        ArrayList<String> grades= new ArrayList<String>();
-        grades.add("Pass");
-        grades.add("Fail");
+                    ArrayList<String> exams = new ArrayList<String>();
+                    exams.add("Java");
+                    exams.add("Oracle");
+                    ArrayList<String> levels = new ArrayList<String>();
+                    levels.add("Basic");
+                    levels.add("Advanced");
+                    ArrayList<String> grades = new ArrayList<String>();
+                    grades.add("Pass");
+                    grades.add("Fail");
 
-        ArrayList<ArrayList<String>> nestedArrayList =
-                new ArrayList< ArrayList<String>>();
-        nestedArrayList.add(exams);
-        nestedArrayList.add(levels);
-        nestedArrayList.add(grades);
+                    ArrayList<ArrayList<String>> nestedArrayList =
+                            new ArrayList<ArrayList<String>>();
+                    nestedArrayList.add(exams);
+                    nestedArrayList.add(levels);
+                    nestedArrayList.add(grades);
 
-        for (ArrayList<String> nestedListElement : nestedArrayList)
-            for (String element : nestedListElement)
-                System.out.println(element);
+                    for (ArrayList<String> nestedListElement : nestedArrayList)
+                        for (String element : nestedListElement)
+                            System.out.println(element);
 
-        StringBuilder myArr[] = {
-                new StringBuilder("Java"),
-                new StringBuilder("Loop")
-        };
-        for (StringBuilder val : myArr)
-        System.out.println (val);
-        for (StringBuilder val : myArr)
-            val = new StringBuilder("Oracle");
-        for (StringBuilder val : myArr)
-            System.out.println (val);
-
-
-
-
-        int i = 10;
-        do
-            while (i++ < 15) {
-                System.out.println("i = " + i);
-                i = i + 20;}
-        while (i < 2);
-        System.out.println(i);
-
-        int num = 20;
-        final int num2 = 20;
-
-        switch (num) {
-            default:
-                System.out.println("default");
-            case num2:
-                System.out.println(4);
-                break;
-        }
+                    StringBuilder myArr[] = {
+                            new StringBuilder("Java"),
+                            new StringBuilder("Loop")
+                    };
+                    for (StringBuilder val : myArr)
+                        System.out.println(val);
+                    for (StringBuilder val : myArr)
+                        val = new StringBuilder("Oracle");
+                    for (StringBuilder val : myArr)
+                        System.out.println(val);
 
 
+                    int k = 10;
+                    do
+                        while (k++ < 15) {
+                            System.out.println("k = " + i);
+                            k = k + 20;
+                        }
+                    while (i < 2);
+                    System.out.println(i);
+
+                    int num = 20;
+                    final int num2 = 20;
+
+                    switch (num) {
+                        default:
+                            System.out.println("default");
+                        case num2:
+                            System.out.println(4);
+                            break;
+                    }
+
+                }
 
     } //main
 }
