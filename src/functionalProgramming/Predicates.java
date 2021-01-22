@@ -13,8 +13,8 @@ public class Predicates {
         empArrList.add(e2);
         empArrList.add(e3);
         empArrList.add(e4);
-        Predicate predicate = e -> e.getPerformanceRating() >= 5;
-        filter(empArrList, predicate);
+//        Predicate predicate = e -> e.getPerformanceRating() >= 5;
+//        filter(empArrList, predicate);
     }
     static void filter(ArrayList<Emp> list, Predicate rule) {
         for (Emp e : list) {
