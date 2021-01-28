@@ -105,7 +105,7 @@ class Wolf extends Canine {
 }
 
 class Marsupial {
-    public static boolean isBiped() {
+    public boolean isBiped() {
         return false;
     }
     public void getMarsupialDescription() {
@@ -113,7 +113,7 @@ class Marsupial {
     }
 }
 class Kangaroo extends Marsupial {
-    public static boolean isBiped() {
+    public boolean isBiped() {
         return true;
     }
     public void getKangarooDescription() {
@@ -121,8 +121,12 @@ class Kangaroo extends Marsupial {
     }
     public static void main(String[] args) {
         Kangaroo joey = new Kangaroo();
+        Marsupial joey2 = new Kangaroo();
         joey.getMarsupialDescription();
+        joey2.getMarsupialDescription();
         joey.getKangarooDescription();
+
+
     }
 }
 
