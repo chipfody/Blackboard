@@ -20,6 +20,24 @@ class Platypus extends Mammal {
     }
 }
 
+interface Nocturnal {
+    default boolean isBlind() {
+        return true;
+    }
+}
+
+class Owl implements Nocturnal {
+    public boolean isBlind() {
+        return false;
+    }
+
+    public static void main(String[] args) {
+        Nocturnal nocturnal = (Nocturnal) new Owl();
+        System.out.println(nocturnal.isBlind());
+    }
+}
+
+
 
 interface CanHop {}
 class Frog implements CanHop {
@@ -29,3 +47,21 @@ class Frog implements CanHop {
 }
 class BrazilianHornedFrog extends Frog {}
 class TurtleFrog extends Frog {}
+
+
+abstract class Bird3 {
+    protected void fly() {
+        System.out.println("Bird is flying");
+    }
+
+    public static void main(String[] args) {
+        Bird3 bird = new Pelican();
+        bird.fly();
+    }
+}
+
+class Pelican extends Bird3 {
+    protected void fly() {
+        System.out.println("Pelican is flying");
+    }
+}
