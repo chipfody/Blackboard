@@ -1,6 +1,7 @@
 package Chapter4;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class RuntimeErrors {
 }
@@ -93,8 +94,69 @@ class ThrowNumberFormatException {
     }
 }
 
-class DemoExceptionInInitializerError {
-    static {
-        int num = Integer.parseInt("sd", 16);
+
+class EJava {
+    void method() {
+        try {
+            guru();
+            return;
+        } finally {
+            System.out.println("finally 1");
+        }
+    }
+    void guru() {
+        System.out.println("guru");
+        throw new StackOverflowError();
+    }
+    public static void main(String args[]) {
+        EJava var = new EJava();
+        var.method();
+    }
+}
+
+class Quest5 {
+    public static void main(String args[]) {
+        int arr[] = new int[5];
+        arr = new int[]{1,2,3,4};
+        System.out.println(Arrays.toString(arr));
+        //System.out.println(arr[4]);
+        int x = arr[1]-- + arr[0]-- /(arr[0] * arr[4]);
+        System.out.println(x);
+    }
+}
+
+class TryFinally {
+    int tryAgain() {
+        int a = 10;
+        try {
+            System.out.println("our first a = " + a);
+            ++a;
+            System.out.println("a is now = " + a);
+        } finally {
+            System.out.println("coming into finally a = " + a);
+            a++;
+            System.out.println("finally a = " + a);
+        }
+        return a;
+    }
+    public static void main(String args[]) {
+        System.out.println(new TryFinally().tryAgain());
+    }
+}
+
+class EJavaBase {
+    void myMethod() throws ExceptionInInitializerError {
+        System.out.println("Base");
+    }
+}
+class EJavaDerived extends EJavaBase {
+    void myMethod() throws RuntimeException {
+        System.out.println("Derived");
+    }
+}
+class EJava3 {
+    public static void main(String args[]) {
+        EJavaBase obj = new EJavaDerived();
+        obj.myMethod();
     }
 }
