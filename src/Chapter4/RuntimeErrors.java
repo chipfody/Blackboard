@@ -60,3 +60,41 @@ class ThrowArithmeticEx {
         System.out.println(x);
     }
 }
+
+class DivideByZeroPointZero {
+    public static void main(String args[]) {
+        int a = 10;
+        int y = a++;
+        int z = y--;
+        int x1 = a - 2*y - z;
+        int x2 = a - 11;
+        double x3 = x2;
+        double x = x1/ x3;
+        System.out.println(x);
+        System.out.println(x1);
+        System.out.println(x3);
+    }
+}
+
+class ThrowNumberFormatException {
+    public static int convertToNum(String val) {
+        int num = 0;
+        try {
+            num = Integer.parseInt(val, 16);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException(val +
+                    " cannot be converted to hexadecimal number");
+        }
+        return num;
+    }
+    public static void main(String args[]) {
+        System.out.println(convertToNum("16b"));
+        System.out.println(convertToNum("65v"));
+    }
+}
+
+class DemoExceptionInInitializerError {
+    static {
+        int num = Integer.parseInt("sd", 16);
+    }
+}
