@@ -154,9 +154,91 @@ class EJavaDerived extends EJavaBase {
         System.out.println("Derived");
     }
 }
-class EJava3 {
-    public static void main(String args[]) {
-        EJavaBase obj = new EJavaDerived();
-        obj.myMethod();
+
+//class EJava3 {
+//    public static void main(String args[]) {
+//        EJavaBase obj = new EJavaDerived();
+//        obj.myMethod();
+//    }
+//}
+
+
+//    public static void main(String[] args) {
+//        try {
+//            hop();
+//        } catch (Exception e) {
+//            System.out.println(e);
+//            System.out.println(e.getMessage());
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    private static void hop() {
+//        throw new RuntimeException("cannot hop");
+//    }
+//}
+
+class DoSomething {
+public void go() {
+        System.out.print("A");
+        try {
+            stop();
+            } catch (ArithmeticException e) {
+            System.out.print("B");
+        }catch (NullPointerException npe) {
+            //System.out.println("Null Pointer");
+            } finally {
+            System.out.print("C");
+            }
+        System.out.print("D");
+        }
+public void stop() {
+        System.out.print("E");
+        Object x = null;
+        x.toString();
+        System.out.print("F");
+        }
+public static void main(String[] args) {
+        new DoSomething().go();
+        }
+}
+
+class DoSomethingElse {
+
+    public static int go() {
+
+        try {
+            return 0 / 0;
+        } catch (
+                ArithmeticException e) {
+            return 0;
+        } catch (
+                RuntimeException e) {
+            return -1;
+        } finally {
+            System.out.print("done");
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(DoSomethingElse.go());
+    }
+}
+
+class Laptop {
+    public void start() {
+        try {
+            System.out.print("Starting up ");
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.print("Problem ");
+            System.exit(0);
+        } finally {
+            System.out.print("Shutting down ");
+        }
+    }
+
+    public static void main(String[] args) {
+        new Laptop().start();
     }
 }
