@@ -16,10 +16,13 @@ class QReference {
     public static void main(String[] args) {
         Base base = new Base();
         Base derived = new Derived();
+        Derived derived2 = new Derived();
         System.out.println(base.var);
         System.out.println(derived.var);
+        System.out.println(derived2.var);
         base.printVar();
         derived.printVar();
+        derived2.printVar();
     }
 }
 
