@@ -1,6 +1,6 @@
 package Chapter4;
 
-public class Order {
+class Order2 {
 
     String value = "t";
 
@@ -12,18 +12,18 @@ public class Order {
         value += "c";
     }
 
-    public Order() {
+    public Order2() {
         value += "b";
     }
 
-    public Order(String s) {
+    public Order2(String s) {
         value += s;
     }
 
     public static void main(String[] args) {
-        Order order = new Order("f");
+        Order2 order = new Order2("f");
         System.out.println(order.value);
-        order = new Order();
+        order = new Order2();
         System.out.println(order.value);
     }
 

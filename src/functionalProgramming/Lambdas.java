@@ -41,4 +41,22 @@ public class Lambdas {
     }
 }
 
+class ParkRanger {
+    int birds = 10;
+
+    public static void main(String[] data) {
+        int trees = 5;
+        ParkRanger p = new ParkRanger();
+        System.out.print(trees + p.birds);
+    }
+}
+
+class Keyboard {
+    private boolean numLock = true;
+    static boolean capLock = false;
+    public static void main(String... shortcuts) {
+        Keyboard kb = new Keyboard();
+        System.out.print(kb.numLock+" "+capLock);
+    }
+}
 
